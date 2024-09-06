@@ -1,0 +1,96 @@
+/* Overall container for the dashboard */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+}
+
+/* Title styling for the dashboard */
+.title {
+  font-size: 2.75rem;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Description for additional context */
+.description {
+  font-size: 1.25rem;
+  color: #666;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Responsive grid container for charts */
+.charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  width: 100%;
+}
+
+/* Individual chart containers */
+.chart {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.chart:hover {
+  transform: translateY(-5px);
+}
+
+/* Chart title styles */
+.chart h2 {
+  font-size: 1.75rem;
+  color: #444;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Error and loading message styles */
+.loading, .error {
+  font-size: 1.75rem;
+  color: #e74c3c;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Adjust padding and font sizes for smaller screens */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.25rem;
+  }
+
+  .chart h2 {
+    font-size: 1.5rem;
+  }
+
+  .dashboard {
+    padding: 15px;
+  }
+}
+
+/* Further adjustment for very small screens */
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .chart h2 {
+    font-size: 1.25rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}
+
